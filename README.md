@@ -34,6 +34,11 @@ A simple tool to detect similarities between Python `.py` files. It helps teache
 
 ---
 
+## Future Scope
+- Language-agnostic comparison
+- Improved scoring logic
+- Integration with web or dashboard interface
+
 ## How to Use
 
 1. Make sure you have Python 3.9+ installed.  
@@ -50,7 +55,3 @@ Upload your .py files or a ZIP file of multiple Python files.
 
 View the comparison results directly in your browser.
 
-## Future Scope
-- Language-agnostic comparison
-- Improved scoring logic
-- Integration with web or dashboard interface

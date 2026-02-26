@@ -29,7 +29,7 @@ A simple tool to detect similarities between Python `.py` files. It helps teache
 3. Results are shown in the browser in a **color-coded format**:  
    - **Red:** Differences  
    - **Green:** Similarities  
-   - **Blue:** Partial matches  
+   - **Yellow:** Partial matches  
 4. Batch comparisons show all results in **collapsible sections** for easy navigation.  
 
 ---

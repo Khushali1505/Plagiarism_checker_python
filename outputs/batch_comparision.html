@@ -1,0 +1,128 @@
+    <html>
+    <head>
+    <style>
+        .collapsible {
+            background-color: #eee;
+            cursor: pointer;
+            padding: 6px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 14px;
+            font-family: monospace;
+            margin-bottom: 2px;
+        }
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            border-left: 2px solid #ccc;
+            margin-bottom: 8px;
+        }
+        table { border-collapse: collapse; width: 100%; font-family: monospace; }
+        td { vertical-align: top; padding:2px 4px; white-space: pre; }
+        .legend-table td { padding:1px 4px; font-size:12px; }
+    </style>
+    </head>
+    <body>
+    <h2>Batch Code Comparison (Collapsible)</h2>
+    <!-- Compact Legend -->
+    <table class="legend-table" style="border:1px solid #ccc; margin-bottom:5px;">
+        <tr>
+            <td style="background:#ffcccc; width:15px;"></td><td>Removed/Changed in left file</td>
+        </tr>
+        <tr>
+            <td style="background:#ffff99;"></td><td>Added/Changed in right file</td>
+        </tr>
+        <tr>
+            <td style="background:#d4fcbc;"></td><td>Equal</td>
+        </tr>
+    </table>
+    
+        <button class="collapsible">prime_check.py ↔ prime_check_optimized.py</button>
+        <div class="content">
+    
+    <h3>prime_check.py ↔ prime_check_optimized.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#ffff99'>number</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>num &lt;</span><span style='background:#d4fcbc'>= </span><span style='background:#ffcccc'>1:</span></td><td><span style='background:#ffff99'>flag</span><span style='background:#d4fcbc'> </span><span style='background:#d4fcbc'>= </span><span style='background:#ffff99'>True</span></td></tr><tr><td></td><td><span style='background:#ffff99'>if number &lt;= 1:</span></td></tr><tr><td></td><td><span style='background:#ffff99'>    flag = False</span></td></tr><tr><td></td><td><span style='background:#ffff99'>else:</span></td></tr><tr><td></td><td><span style='background:#ffff99'>    for i in range(2, int(number ** 0.5) + 1):</span></td></tr><tr><td></td><td><span style='background:#ffff99'>        if number % i == 0:</span></td></tr><tr><td></td><td><span style='background:#ffff99'>            flag = False</span></td></tr><tr><td></td><td><span style='background:#ffff99'>            break</span></td></tr><tr><td></td><td></td></tr><tr><td></td><td><span style='background:#ffff99'>if flag:</span></td></tr><tr><td></td><td><span style='background:#ffff99'>    print(&quot;Prime number&quot;)</span></td></tr><tr><td></td><td><span style='background:#ffff99'>else:</span></td></tr><tr><td><span style='background:#d4fcbc'>    print(&quot;Not a prime number&quot;)</span></td><td><span style='background:#d4fcbc'>    print(&quot;Not a prime number&quot;)</span></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    for i in range(2, num):</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        if num % i == 0:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            print(&quot;Not a prime number&quot;)</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            break</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        print(&quot;Prime number&quot;)</span></td><td></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 29.39 | <strong>AST Score:</strong> 66.17 | <strong>Combined:</strong> 47.78</p>
+    <hr>
+    </div>
+        
+        <button class="collapsible">prime_check.py ↔ sum_numbers.py</button>
+        <div class="content">
+    
+    <h3>prime_check.py ↔ sum_numbers.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#ffff99'>n</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td></td><td><span style='background:#ffff99'>total = 0</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>&lt;=</span><span style='background:#d4fcbc'> 1</span><span style='background:#d4fcbc'>:</span></td><td><span style='background:#ffff99'>for</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>i</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>in range(1, n +</span><span style='background:#d4fcbc'> 1</span><span style='background:#ffff99'>)</span><span style='background:#d4fcbc'>:</span></td></tr><tr><td><span style='background:#d4fcbc'>    </span><span style='background:#ffcccc'>print(&quot;Not</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>a</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>prime number&quot;)</span></td><td><span style='background:#d4fcbc'>    </span><span style='background:#ffff99'>total</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>+=</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>i</span></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    for</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>i in range(2</span><span style='background:#d4fcbc'>, </span><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'>)</span><span style='background:#ffcccc'>:</span></td><td><span style='background:#ffff99'>print(&quot;Sum</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>is:&quot;</span><span style='background:#d4fcbc'>, </span><span style='background:#ffff99'>total</span><span style='background:#d4fcbc'>)</span></td></tr><tr><td><span style='background:#ffcccc'>        if num % i == 0:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            print(&quot;Not a prime number&quot;)</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            break</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        print(&quot;Prime number&quot;)</span></td><td></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 46.02 | <strong>AST Score:</strong> 46.06 | <strong>Combined:</strong> 46.04</p>
+    <hr>
+    </div>
+        
+        <button class="collapsible">prime_check.py ↔ sum_numbers_while.py</button>
+        <div class="content">
+    
+    <h3>prime_check.py ↔ sum_numbers_while.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#ffff99'>n</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td></td><td><span style='background:#ffff99'>i = 1</span></td></tr><tr><td></td><td><span style='background:#ffff99'>result = 0</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> &lt;= </span><span style='background:#ffcccc'>1</span><span style='background:#d4fcbc'>:</span></td><td><span style='background:#ffff99'>while</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>i</span><span style='background:#d4fcbc'> &lt;= </span><span style='background:#ffff99'>n</span><span style='background:#d4fcbc'>:</span></td></tr><tr><td><span style='background:#d4fcbc'>    </span><span style='background:#ffcccc'>print(&quot;Not</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>a</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>prime</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>number&quot;)</span></td><td><span style='background:#d4fcbc'>    </span><span style='background:#ffff99'>result</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>=</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>result</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>+ i</span></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td><span style='background:#ffff99'>    i += 1</span></td></tr><tr><td><span style='background:#ffcccc'>    for i in range(2, num):</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>num</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>% i == 0:</span></td><td><span style='background:#ffff99'>print(&quot;Sum</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>is:&quot;,</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>result)</span></td></tr><tr><td><span style='background:#ffcccc'>            print(&quot;Not a prime number&quot;)</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            break</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        print(&quot;Prime number&quot;)</span></td><td></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 34.24 | <strong>AST Score:</strong> 33.26 | <strong>Combined:</strong> 33.75</p>
+    <hr>
+    </div>
+        
+        <button class="collapsible">prime_check_optimized.py ↔ sum_numbers.py</button>
+        <div class="content">
+    
+    <h3>prime_check_optimized.py ↔ sum_numbers.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#ffcccc'>number</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#ffff99'>n</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td></td><td><span style='background:#ffff99'>total = 0</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>flag</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>=</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>True</span></td><td><span style='background:#ffff99'>for</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>i</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>in range(1, n + 1):</span></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>number &lt;</span><span style='background:#d4fcbc'>= </span><span style='background:#ffcccc'>1:</span></td><td><span style='background:#ffff99'>    total</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>+</span><span style='background:#d4fcbc'>= </span><span style='background:#ffff99'>i</span></td></tr><tr><td><span style='background:#ffcccc'>    flag = False</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    for i in range(2, int(number ** 0.5) + 1):</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        if number % i == 0:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            flag = False</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            break</span></td><td></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>flag</span><span style='background:#d4fcbc'>:</span></td><td><span style='background:#ffff99'>print(&quot;Sum</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>is</span><span style='background:#d4fcbc'>:</span><span style='background:#ffff99'>&quot;, total)</span></td></tr><tr><td><span style='background:#ffcccc'>    print(&quot;Prime number&quot;)</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    print(&quot;Not a prime number&quot;)</span></td><td></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 43.94 | <strong>AST Score:</strong> 20.56 | <strong>Combined:</strong> 32.25</p>
+    <hr>
+    </div>
+        
+        <button class="collapsible">prime_check_optimized.py ↔ sum_numbers_while.py</button>
+        <div class="content">
+    
+    <h3>prime_check_optimized.py ↔ sum_numbers_while.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#ffcccc'>number</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#ffff99'>n</span><span style='background:#d4fcbc'> = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td></td><td><span style='background:#ffff99'>i = 1</span></td></tr><tr><td></td><td><span style='background:#ffff99'>result = 0</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>flag</span><span style='background:#d4fcbc'> </span><span style='background:#d4fcbc'>= </span><span style='background:#ffcccc'>True</span></td><td><span style='background:#ffff99'>while</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>i &lt;</span><span style='background:#d4fcbc'>= </span><span style='background:#ffff99'>n:</span></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>number &lt;</span><span style='background:#d4fcbc'>= </span><span style='background:#ffcccc'>1:</span></td><td><span style='background:#ffff99'>    result</span><span style='background:#d4fcbc'> </span><span style='background:#d4fcbc'>= </span><span style='background:#ffff99'>result + i</span></td></tr><tr><td><span style='background:#d4fcbc'>    </span><span style='background:#ffcccc'>flag</span><span style='background:#d4fcbc'> </span><span style='background:#d4fcbc'>= </span><span style='background:#ffcccc'>False</span></td><td><span style='background:#d4fcbc'>    </span><span style='background:#ffff99'>i</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>+</span><span style='background:#d4fcbc'>= </span><span style='background:#ffff99'>1</span></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    for i in range(2, int(number ** 0.5) + 1):</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>        if number % i == 0:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            flag = False</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>            break</span></td><td></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>if</span><span style='background:#d4fcbc'> </span><span style='background:#ffcccc'>flag</span><span style='background:#d4fcbc'>:</span></td><td><span style='background:#ffff99'>print(&quot;Sum</span><span style='background:#d4fcbc'> </span><span style='background:#ffff99'>is</span><span style='background:#d4fcbc'>:</span><span style='background:#ffff99'>&quot;, result)</span></td></tr><tr><td><span style='background:#ffcccc'>    print(&quot;Prime number&quot;)</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>else:</span></td><td></td></tr><tr><td><span style='background:#ffcccc'>    print(&quot;Not a prime number&quot;)</span></td><td></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 39.32 | <strong>AST Score:</strong> 7.16 | <strong>Combined:</strong> 23.24</p>
+    <hr>
+    </div>
+        
+        <button class="collapsible">sum_numbers.py ↔ sum_numbers_while.py</button>
+        <div class="content">
+    
+    <h3>sum_numbers.py ↔ sum_numbers_while.py</h3>
+    <table style='border-collapse:collapse; width:100%; font-family:monospace;'>
+        <tr><td><span style='background:#d4fcbc'>n = int(input(&quot;Enter a number: &quot;))</span></td><td><span style='background:#d4fcbc'>n = int(input(&quot;Enter a number: &quot;))</span></td></tr><tr><td><span style='background:#ffcccc'>total</span><span style='background:#d4fcbc'> = </span><span style='background:#ffcccc'>0</span></td><td><span style='background:#ffff99'>i</span><span style='background:#d4fcbc'> = </span><span style='background:#ffff99'>1</span></td></tr><tr><td></td><td><span style='background:#ffff99'>result = 0</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#ffcccc'>for</span><span style='background:#d4fcbc'> i </span><span style='background:#ffcccc'>in range(1,</span><span style='background:#d4fcbc'> n</span><span style='background:#ffcccc'> + 1)</span><span style='background:#d4fcbc'>:</span></td><td><span style='background:#ffff99'>while</span><span style='background:#d4fcbc'> i </span><span style='background:#ffff99'>&lt;=</span><span style='background:#d4fcbc'> n</span><span style='background:#d4fcbc'>:</span></td></tr><tr><td><span style='background:#d4fcbc'>    </span><span style='background:#ffcccc'>total</span><span style='background:#d4fcbc'> +</span><span style='background:#ffcccc'>=</span><span style='background:#d4fcbc'> i</span></td><td><span style='background:#d4fcbc'>    </span><span style='background:#ffff99'>result = result</span><span style='background:#d4fcbc'> +</span><span style='background:#d4fcbc'> i</span></td></tr><tr><td></td><td><span style='background:#ffff99'>    i += 1</span></td></tr><tr><td></td><td></td></tr><tr><td><span style='background:#d4fcbc'>print(&quot;Sum is:&quot;, </span><span style='background:#ffcccc'>total</span><span style='background:#d4fcbc'>)</span></td><td><span style='background:#d4fcbc'>print(&quot;Sum is:&quot;, </span><span style='background:#ffff99'>result</span><span style='background:#d4fcbc'>)</span></td></tr>
+    </table>
+    <p><strong>Text Score:</strong> 67.5 | <strong>AST Score:</strong> 43.51 | <strong>Combined:</strong> 55.5</p>
+    <hr>
+    </div>
+        
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    </body>
+    </html>
+    
